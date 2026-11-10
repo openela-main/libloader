@@ -1,6 +1,6 @@
 Name: libloader
 Version: 1.1.3
-Release: 32%{?dist}
+Release: 33%{?dist}
 Summary: Resource Loading Framework
 License: LGPLv2
 #Original source: http://downloads.sourceforge.net/jfreereport/%%{name}-%%{version}.zip
@@ -66,6 +66,11 @@ cp -rp bin/javadoc/docs/api $RPM_BUILD_ROOT%{_javadocdir}/%{name}
 %{_javadocdir}/%{name}
 
 %changelog
+* Tue Jun 30 2026 RHEL Packaging Agent <redhat-ymir-agent@redhat.com> - 1.1.3-33
+- Update javac source/target from 1.6 to 1.8 for java-17-openjdk
+  compatibility
+- Resolves: RHEL-183614
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 1.1.3-32
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
